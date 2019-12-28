@@ -14,7 +14,7 @@ const CardInfo = ({ title, subTitle, description, ...props }) => {
           <ul className="technology-images">
             {
               technologies.split(", ").map((technology) => (
-                <li>
+                <li key={technology}>
                   <Avatar src={require(`../../assets/images/${technology}.svg`)} shape="square" alt={technology} />
                 </li>
               ))
