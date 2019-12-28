@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Avatar } from "antd";
+import { Card, Avatar, Tooltip } from "antd";
 import "./user-profile.scss";
 
 const UserProfile = () => (
@@ -7,9 +7,21 @@ const UserProfile = () => (
     key="user-profile"
     className="user-profile-card"
     actions={[
-      <Avatar src={require("../../assets/images/linkedin.svg")} key="linkedin" shape="square" />,
-      <Avatar src={require("../../assets/images/github.svg")} key="github" shape="square" />,
-      <Avatar src={require("../../assets/images/antd.svg")} key="antd" shape="square" />
+      (
+        <Tooltip placement="top" title="Linkedin">
+          <Avatar src={require("../../assets/images/linkedin.svg")} key="linkedin" shape="square" />
+        </Tooltip>
+      ),
+      (
+        <Tooltip placement="top" title="Github">
+          <Avatar src={require("../../assets/images/github.svg")} key="github" shape="square" />,
+        </Tooltip>
+      ),
+      (
+        <Tooltip placement="top" title="Antd">
+          <Avatar src={require("../../assets/images/antd.svg")} key="antd" shape="square" />
+        </Tooltip>
+      )
     ]}
   >
     <Avatar
