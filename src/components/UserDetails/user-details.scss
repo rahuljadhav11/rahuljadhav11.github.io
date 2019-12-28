@@ -12,7 +12,6 @@
   // Allign items at center
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   // Shadow effect
   &:hover {
@@ -21,5 +20,9 @@
 
   .ant-card-body {
     overflow-y: auto;
+  }
+
+  .ant-tabs .ant-tabs-large-bar .ant-tabs-tab {
+    padding: 12.5px;
   }
 }
