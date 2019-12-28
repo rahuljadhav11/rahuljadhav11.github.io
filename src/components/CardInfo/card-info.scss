@@ -1,0 +1,62 @@
+@import "../../css/global/variables.scss";
+@import "../../css/global/mixins.scss";
+@import "../../css/global/fonts.scss";
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  height: inherit;
+
+  .title {
+    @include text-formating(
+      16px,
+      $text-color,
+      normal,
+      bold,
+      "Cadiz-Bold"
+    );
+
+    &:after {
+      content: "";
+      background-color: rgba(151, 151, 151, 0.4);
+      width: 100%;
+      height: 1px;
+      position: relative;
+      display: inline-block;
+      left: 0;
+      top: -5px;
+    }
+  }
+
+  .sub-title {
+    @include text-formating(
+      10px,
+      $text-color,
+      normal,
+      normal,
+      "Cadiz-Regular"
+    );
+  }
+
+  .description {
+    margin-top: 12px;
+    @include text-formating(
+      13px,
+      $text-color,
+      normal,
+      normal,
+      "Cadiz-Regular"
+    );
+  }
+
+  .sub-description {
+    @include text-formating(
+      13px,
+      $text-color,
+      normal,
+      normal,
+      "Cadiz-Regular"
+    );
+  }
+}
