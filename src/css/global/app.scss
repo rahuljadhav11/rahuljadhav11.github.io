@@ -1,0 +1,13 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+body {
+  font-family: "Cadiz-Regular";
+  font-size: 0.6875rem;
+}
+
+.ant-layout {
+  background-color: $body-background !important;
+  height: 100vh;
+}

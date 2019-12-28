@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Layout, Col } from "antd";
+import UserProfile from "../components/UserProfile";
 import "antd/dist/antd.css";
-import './App.css';
+import '../css/global/app.scss';
 
-class App extends Component {
-  render() {
-    return (
-      <div>My Portfolio</div>
-    );
-  }
-}
+const { Content } = Layout;
+
+const App = () => (
+  <Layout>
+    <Content>
+      <Col span={8}><UserProfile /></Col>
+    </Content>
+  </Layout>
+);
 
 export default App;
