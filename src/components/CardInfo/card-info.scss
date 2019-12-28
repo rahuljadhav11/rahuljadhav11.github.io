@@ -59,4 +59,29 @@
       "Cadiz-Regular"
     );
   }
+
+  .technology-images {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .technology-images > li {
+    float: left;
+    text-align: center;
+    width: auto;
+  }
+
+  .technology-images > li:not(:last-child) {
+    margin-right: 20px;
+
+    &:after {
+      content: "";
+      border-right: 1px solid $border-color;
+      width: 1px;
+      height: 100%;
+      position: relative;
+      right: -10px;
+    }
+  }
 }
