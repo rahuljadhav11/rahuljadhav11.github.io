@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Avatar, Tooltip } from "antd";
+import { Card, Avatar, Tooltip } from "antd";
 import { titleize } from "../../utils/helper";
 import "./card-info.scss";
 
@@ -18,15 +18,15 @@ const imageList = technologies => (
 )
 
 const CardInfo = ({ title, subTitle, description, ...props }) => {
-  const { technologies, className } = props;
+  const { technologies } = props;
   return (
     <Fragment>
-      <div key={title} className={`card-info ${className}`}>
+      <Card key={title} className="card-info" bordered={false} hoverable>
         { title && <div className="title">{title}</div> }
         { subTitle && <div className="sub-title">{subTitle}</div> }
         { description && <p align="justify" className="description">{description}</p> }
         { technologies && imageList(technologies) }
-      </div>
+      </Card>
     </Fragment>
   );
 };

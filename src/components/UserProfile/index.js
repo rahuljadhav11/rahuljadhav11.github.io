@@ -9,12 +9,16 @@ const UserProfile = () => (
     actions={[
       (
         <Tooltip placement="top" title="Linkedin">
-          <Avatar src={require("../../assets/images/linkedin.svg")} key="linkedin" shape="square" />
+          <a href="https://www.linkedin.com/in/rahul-jadhav-922b0811a/" rel="noopener noreferrer" target="_blank">
+            <Avatar src={require("../../assets/images/linkedin.svg")} key="linkedin" shape="square" />
+          </a>
         </Tooltip>
       ),
       (
         <Tooltip placement="top" title="Github">
-          <Avatar src={require("../../assets/images/github.svg")} key="github" shape="square" />,
+          <a href="https://github.com/pain11" rel="noopener noreferrer" target="_blank">
+            <Avatar src={require("../../assets/images/github.svg")} key="github" shape="square" />,
+          </a>
         </Tooltip>
       ),
       (

@@ -3,10 +3,14 @@
 @import "../../css/global/fonts.scss";
 
 .card-info {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  height: inherit;
+  transition: 0.5s;
+
+  .ant-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 12px;
+  }
 
   .title {
     @include text-formating(
@@ -16,6 +20,7 @@
       bold,
       "Cadiz-Bold"
     );
+    letter-spacing: 0.2px;
 
     &:after {
       content: "";
@@ -37,6 +42,7 @@
       normal,
       "Cadiz-Regular"
     );
+    letter-spacing: 0.2px;
   }
 
   .description {
@@ -48,16 +54,7 @@
       normal,
       "Cadiz-Regular"
     );
-  }
-
-  .sub-description {
-    @include text-formating(
-      13px,
-      $text-color,
-      normal,
-      normal,
-      "Cadiz-Regular"
-    );
+    letter-spacing: 0.2px;
   }
 
   .technology-images {
