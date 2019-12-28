@@ -19,6 +19,10 @@
     box-shadow: 0 0 10px 5px rgba(203, 203, 203, 0.8);
   }
 
+  .ant-card-body {
+    overflow-y: auto;
+  }
+
   .ant-card-actions {
     margin-top: auto;
     align-items: end;
@@ -32,8 +36,7 @@
   }
 
   .user-name {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-top: 20px;
     @include text-formating(
       20px,
@@ -46,8 +49,7 @@
   }
 
   .user-info {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-top: 10px;
     @include text-formating(
       14px,
