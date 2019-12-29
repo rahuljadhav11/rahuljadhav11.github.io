@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Avatar, Tooltip, Row } from "antd";
 import "./user-profile.scss";
 
-const UserProfile = () => (
+const UserProfile = ({ userProfile }) => (
   <Card
     key="user-profile"
     className="user-profile-card"
@@ -38,16 +38,10 @@ const UserProfile = () => (
         alt="user-profile"
       />
     </Row>
-    <Row className="user-name">Rahul Jadhav</Row>
-    <Row className="user-info">Contact No. - 9404378965</Row>
-    <Row className="user-info">Email - rahul.rj9421@gmail.com</Row>
-    <Row>
-      <p align="justify" className="user-objective">
-        Ruby on Rails and ReactJs developer, who likes work on new challenging technology problems.
-        I am interested in data structures, algorithms and OOP programming.
-        I am seeking interesting opportunity to solve real life problems.
-      </p>
-    </Row>
+    <Row className="user-name">{userProfile.name}</Row>
+    <Row className="user-info">Contact No. - {userProfile.contact_number}</Row>
+    <Row className="user-info">Email - {userProfile.email}</Row>
+    <Row><p align="justify" className="user-objective">{userProfile.about_me}</p></Row>
   </Card>
 );
 

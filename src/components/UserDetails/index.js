@@ -1,40 +1,33 @@
 import React, { useState } from "react";
-import Projects from "../Projects";
 import { Card, Empty } from "antd";
+import Projects from "../Projects";
 import "./user-details.scss";
 
-const tabs = [
-  {
-    key: "projects",
-    tab: "PROJECTS"
-  },
-  {
-    key: "education",
-    tab: "EDUCATION"
-  },
-];
+const tabs = userDetails => (
+  Object.keys(userDetails).map(key => ({ key: key, tab: key.toUpperCase() }))
+);
 
-const componentToLoad = (key) => {
-  switch (key) {
+const componentToLoad = (userDetails, activeTab) => {
+  switch (activeTab) {
     case "projects":
-      return <Projects />;
+      return <Projects projects={userDetails["projects"]} />;
     default:
       return <Empty />;
   }
 };
 
-const UserDetails = () => {
-  const [activeTab, setActiveTab] = useState("projects");
+const UserDetails = ({ userDetails }) => {
+  const [activeTab, setActiveTab] = useState("experience");
 
   return (
     <Card
       key="user-details"
       className="user-details"
-      tabList={tabs}
+      tabList={tabs(userDetails)}
       activeTabKey={activeTab}
       onTabChange={key => setActiveTab(key)}
     >
-      {componentToLoad(activeTab)}
+      {componentToLoad(userDetails, activeTab)}
     </Card>
   )
 };
