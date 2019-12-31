@@ -11,13 +11,15 @@ export const user = {
         "company": "Josh software Pvt. Ltd, ​Pune",
         "designation": "Software Engineer",
         "period": "JUNE 2018 - PRESENT",
-        "description": "Technology experts and solution providers in various domains, uses Ruby on Rails and ReactJs platform to provide solution to end users in marketing domain."
+        "description": "Technology experts and solution providers in various domains, uses Ruby on Rails and ReactJs platform to provide solution to end users in marketing domain.",
+        "technologies": "rails, ruby, react, redux, psql, jira"
       },
       {
         "company": "Josh software Pvt. Ltd, ​Pune",
         "designation": "​Intern",
         "period": "JAN 2018 - MAY 2018",
-        "description": "Worked on open source project based on ruby on rails platform. Open source project to motivate and reward open source contributors based on quality of commits and activities."
+        "description": "Worked on open source project based on ruby on rails platform. Open source project to motivate and reward open source contributors based on quality of commits and activities.",
+        "technologies": "rails, ruby, javascript, jquery, haml, mongodb"
       }
     ],
     "projects": [

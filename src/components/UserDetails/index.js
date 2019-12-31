@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Card, Empty } from "antd";
 import Projects from "../Projects";
+import Experience from "../Experience";
+import Education from "../Education";
 import "./user-details.scss";
 
 const tabs = userDetails => (
@@ -9,8 +11,12 @@ const tabs = userDetails => (
 
 const componentToLoad = (userDetails, activeTab) => {
   switch (activeTab) {
+    case "experience":
+      return <Experience experience={userDetails["experience"]} />;
     case "projects":
       return <Projects projects={userDetails["projects"]} />;
+    case "education":
+      return <Education education={userDetails["education"]} />;
     default:
       return <Empty />;
   }
