@@ -30,6 +30,7 @@ const Projects = ({ projects }) => {
         }
       </Row>
     )
+    formattedData.push(<br key={`project-br-${index}`} />)
   }
 
   return (

@@ -11,3 +11,11 @@ body {
   background-color: $body-background !important;
   height: 100vh;
 }
+
+.ant-avatar-square {
+  border-radius: 0px;
+}
+
+.ant-timeline {
+  padding: 10px;
+}

@@ -6,20 +6,26 @@ const { Item } = Timeline;
 
 const Experience = ({ experience }) => (
   <Timeline mode="alternate" className="experience">
-    <Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>
-      <CardInfo
-        title={`${experience[0].company} - ${experience[0].designation}`}
-        subTitle={experience[0].period}
-        description={experience[0].description}
-      />
-    </Item>
-    <Item color="green">
-      <CardInfo
-        title={`${experience[1].company} - ${experience[1].designation}`}
-        subTitle={experience[1].period}
-        description={experience[1].description}
-      />
-    </Item>
+    {
+      experience.map((item, index) => {
+        const dotType = index === 0 ? "clock-circle" : "check-circle"
+        const color = index === 0 ? "blue" : "green"
+
+        return (
+          <Item
+            key={`${item.designation} - ${item.company}`}
+            dot={<Icon type={dotType} style={{ fontSize: '16px' }} />}
+            color={color}
+          >
+            <CardInfo
+              title={`${item.designation} - ${item.company}`}
+              subTitle={item.period}
+              description={item.description}
+            />
+          </Item>
+        )
+      })
+    }
   </Timeline>
 );
 

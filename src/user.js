@@ -3,9 +3,15 @@ export const user = {
     "name": "Rahul Jadhav",
     "contact_number": "9404378965",
     "email": "rahul.rj9421@gmail.com",
-    "about_me": "Ruby on Rails and ReactJs developer, who likes work on new challenging technology problems. I am interested in data structures, algorithms and OOP programming. I am seeking interesting opportunity to solve real life problems."
+    "about_me": "Full stack developer, who likes work on new challenging technology problems. I am interested in data structures, algorithms and OOP programming. I am seeking interesting opportunity to solve real life problems."
   },
   "details": {
+    "skills": {
+      "backend": "rails, ruby",
+      "frontend": "react, redux, rails, javascript, jquery, haml",
+      "database": "mongodb, psql, mysql",
+      "tools": "jira"
+    },
     "experience": [
       {
         "company": "Josh software Pvt. Ltd, ​Pune",
@@ -83,7 +89,7 @@ export const user = {
         "institute": "Jawahar Navodaya Vidyalaya, ​Latur",
         "degree": "SSC",
         "period": "JULY 2011 - MAY 2012",
-        "marks": "CGPA -9.4"
+        "marks": "CGPA - 9.4"
       }
     ]
   }

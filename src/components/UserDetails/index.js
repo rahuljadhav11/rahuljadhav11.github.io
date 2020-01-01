@@ -3,6 +3,7 @@ import { Card, Empty } from "antd";
 import Projects from "../Projects";
 import Experience from "../Experience";
 import Education from "../Education";
+import Skill from "../Skill";
 import "./user-details.scss";
 
 const tabs = userDetails => (
@@ -17,13 +18,15 @@ const componentToLoad = (userDetails, activeTab) => {
       return <Projects projects={userDetails["projects"]} />;
     case "education":
       return <Education education={userDetails["education"]} />;
+    case "skills":
+      return <Skill skills={userDetails["skills"]} />;
     default:
       return <Empty />;
   }
 };
 
 const UserDetails = ({ userDetails }) => {
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("skills");
 
   return (
     <Card
