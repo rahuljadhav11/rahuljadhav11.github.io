@@ -6,9 +6,8 @@ import Education from "../Education";
 import Skill from "../Skill";
 import "./user-details.scss";
 
-const tabs = userDetails => (
-  Object.keys(userDetails).map(key => ({ key: key, tab: key.toUpperCase() }))
-);
+const tabs = userDetails =>
+  Object.keys(userDetails).map(key => ({ key: key, tab: key.toUpperCase() }));
 
 const componentToLoad = (userDetails, activeTab) => {
   switch (activeTab) {
@@ -38,7 +37,7 @@ const UserDetails = ({ userDetails }) => {
     >
       {componentToLoad(userDetails, activeTab)}
     </Card>
-  )
+  );
 };
 
 export default UserDetails;

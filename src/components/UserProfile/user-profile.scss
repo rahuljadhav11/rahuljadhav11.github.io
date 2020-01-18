@@ -3,10 +3,10 @@
 @import "../../css/global/fonts.scss";
 
 .user-profile-card {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 60px);
   border: solid 1px $border-color;
   background-color: #ffffff;
-  margin: 20px 10px 20px 20px !important;
+  margin: 30px 15px 30px 30px !important;
   transition: 0.5s;
 
   // Allign items at center
@@ -15,9 +15,7 @@
   justify-content: center;
 
   // Shadow effect
-  &:hover {
-    box-shadow: 0 0 10px 5px rgba(203, 203, 203, 0.8);
-  }
+  box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
 
   .ant-card-body {
     overflow-y: auto;
