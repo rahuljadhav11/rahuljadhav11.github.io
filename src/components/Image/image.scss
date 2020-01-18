@@ -1,0 +1,31 @@
+@import "../../css/global/variables.scss";
+@import "../../css/global/mixins.scss";
+@import "../../css/global/fonts.scss";
+
+.image {
+  text-align: center;
+
+  // Shadow effect
+  box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .ant-card-body {
+    cursor: default;
+
+    .image-title {
+      text-align: center;
+      margin-top: 7px;
+      @include text-formating(
+        14px,
+        $black-color,
+        normal,
+        normal,
+        "Cadiz-Regular"
+      );
+      letter-spacing: 0.20px;
+    }
+  }
+}
