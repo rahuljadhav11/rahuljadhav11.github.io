@@ -9,7 +9,7 @@ const renderSkillImages = skills => {
   const itemCount = 24 / colLength;
 
   return group(skills, itemCount).map((skill, index) => (
-    <div>
+    <div key={index}>
       <Row key={index} className="technology-images" gutter={16}>
         {skill.map(item => (
           <Col key={item.name} span={colLength}>

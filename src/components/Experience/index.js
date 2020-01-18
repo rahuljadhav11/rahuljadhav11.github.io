@@ -18,9 +18,10 @@ const Experience = ({ experience }) => (
         >
           <CardInfo
             className="experience"
-            title={`${item.designation} - ${item.company}`}
+            title={`${item.designation} @ ${item.company}`}
             subTitle={item.period}
             description={item.description}
+            responsibilities={item.responsibilities}
           />
         </Item>
       );

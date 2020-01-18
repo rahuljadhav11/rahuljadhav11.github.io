@@ -6,7 +6,7 @@ import "./image.scss";
 const Image = ({ title, tag, shape, size }) => (
   <Card key={title} className="image" bordered={false}>
     {tag ? (
-      <Tooltip title={`Experience - ${tag}`}>
+      <Tooltip title={`Experience in ${title} is ${tag} years.`}>
         <Badge count={tag} style={{ backgroundColor: "#fa8c16" }}>
           <Avatar
             className="tech"

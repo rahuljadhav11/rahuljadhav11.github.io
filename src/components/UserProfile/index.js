@@ -1,53 +1,76 @@
 import React from "react";
-import { Card, Avatar, Tooltip, Row } from "antd";
+import { Card, Avatar, Tooltip, Row, Col } from "antd";
+import { titleize } from "../../utils/helper";
 import "./user-profile.scss";
+
+const actions = userActions =>
+  userActions.map(action => (
+    <Tooltip placement="top" title={titleize(action.name)}>
+      <a href={action.link} rel="noopener noreferrer" target="_blank">
+        <Avatar
+          src={require(`../../assets/images/${action.name}.svg`)}
+          key={action.name}
+          shape="square"
+        />
+      </a>
+    </Tooltip>
+  ));
+
+const hobbies = () => (
+  <Row className="hobbies" gutter={16}>
+    <Col span={5}>
+      <Avatar
+        className="avatar"
+        src={require(`../../assets/images/hackerrank.svg`)}
+        shape="square"
+        alt="blender"
+        size={64}
+      />
+    </Col>
+    <Col span={5}>
+      <Avatar
+        className="avatar"
+        src={require(`../../assets/images/ruby.svg`)}
+        shape="square"
+        alt="blender"
+        size={64}
+      />
+    </Col>
+    <Col span={5}>
+      <Avatar
+        className="avatar"
+        src={require(`../../assets/images/git.svg`)}
+        shape="square"
+        alt="blender"
+        size={64}
+      />
+    </Col>
+    <Col span={5}>
+      <Avatar
+        className="avatar"
+        src={require(`../../assets/images/jira.svg`)}
+        shape="square"
+        alt="blender"
+        size={64}
+      />
+    </Col>
+    <Col span={5}>
+      <Avatar
+        className="avatar"
+        src={require(`../../assets/images/haml.svg`)}
+        shape="square"
+        alt="blender"
+        size={64}
+      />
+    </Col>
+  </Row>
+);
 
 const UserProfile = ({ userProfile }) => (
   <Card
     key="user-profile"
     className="user-profile-card"
-    actions={[
-      <Tooltip placement="top" title="Linkedin">
-        <a
-          href="https://www.linkedin.com/in/rahul-jadhav-922b0811a/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Avatar
-            src={require("../../assets/images/linkedin.svg")}
-            key="linkedin"
-            shape="square"
-          />
-        </a>
-      </Tooltip>,
-      <Tooltip placement="top" title="Github">
-        <a
-          href="https://github.com/pain11"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Avatar
-            src={require("../../assets/images/github.svg")}
-            key="github"
-            shape="square"
-          />
-          ,
-        </a>
-      </Tooltip>,
-      <Tooltip placement="top" title="Antd">
-        <a
-          href="https://www.hackerrank.com/rahulrj11?hr_r=1"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Avatar
-            src={require("../../assets/images/hackerrank.svg")}
-            key="antd"
-            shape="square"
-          />
-        </a>
-      </Tooltip>
-    ]}
+    actions={actions(userProfile.actions)}
   >
     <Row>
       <Avatar

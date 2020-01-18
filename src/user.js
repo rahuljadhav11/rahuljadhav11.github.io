@@ -4,7 +4,21 @@ export const user = {
     contact_number: "9404378965",
     email: "rahul.rj9421@gmail.com",
     about_me:
-      "Full stack developer, who likes work on new challenging technology problems. I am interested in data structures, algorithms and OOP programming. I am seeking interesting opportunity to solve real life problems."
+      "Full stack developer, who likes work on new challenging technology problems. I am interested in data structures, algorithms and OOP programming. I am seeking interesting opportunity to solve real life problems.",
+    actions: [
+      {
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/rahul-jadhav-922b0811a/"
+      },
+      {
+        name: "github",
+        link: "https://github.com/pain11"
+      },
+      {
+        name: "hackerrank",
+        link: "https://www.hackerrank.com/rahulrj11?hr_r=1"
+      }
+    ]
   },
   details: {
     skills: {
@@ -22,7 +36,7 @@ export const user = {
         { name: "haml", experience: "0.5" }
       ],
       database: [
-        { name: "psql", experience: "1+" },
+        { name: "psql", experience: "1.5+" },
         { name: "mongodb", experience: "0.5+" },
         { name: "mysql", experience: "0.5+" }
       ],
@@ -40,6 +54,14 @@ export const user = {
         period: "JUNE 2018 - PRESENT",
         description:
           "Technology experts and solution providers in various domains, uses Ruby on Rails and ReactJs platform to provide solution to end users in marketing domain.",
+        responsibilities: [
+          "Designing and Writing RESTful Apis.",
+          "Writing optimized and testable code by understanding system requirements.",
+          "Following TDD process to build better system.",
+          "Integrating application with third party Apis.",
+          "Understanding and prioritizing system requirements.",
+          "Building UI components for better user experience."
+        ],
         technologies: "rails, ruby, react, redux, psql, jira"
       },
       {
@@ -48,6 +70,12 @@ export const user = {
         period: "JAN 2018 - MAY 2018",
         description:
           "Worked on open source project based on ruby on rails platform. Open source project to motivate and reward open source contributors based on quality of commits and activities.",
+        responsibilities: [
+          "Designing and Writing RESTful Apis.",
+          "Writing optimized and testable code by understanding system requirements.",
+          "Building UI components as per the requirements.",
+          "Coming up with new ideas/features to get the attention of end users"
+        ],
         technologies: "rails, ruby, javascript, jquery, haml, mongodb"
       }
     ],
@@ -78,6 +106,7 @@ export const user = {
         sub_title: "Oct 2017 - March 2018",
         description:
           "Project to process and analyse big data (images) using Hadoop. Creating sets of images and comparing them on single-node and multi-node clusters. Processing image data like iris and fingerprint patterns in distributed manner and comparing sequential results with distributed results.",
+        responsibilities: "",
         technologies: "hadoop, java"
       },
       {

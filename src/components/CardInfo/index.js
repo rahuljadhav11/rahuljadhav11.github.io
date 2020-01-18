@@ -19,8 +19,21 @@ const imageList = technologies => (
   </ul>
 );
 
+const list = responsibilities => (
+  <div className="list-responsibilities">
+    <div className="header">Roles and Responsibilities</div>
+    <ul className="responsibilities">
+      {responsibilities.map(responsibility => (
+        <li key={responsibility}>
+          <p align="left">{responsibility}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 const CardInfo = ({ title, subTitle, description, ...props }) => {
-  const { technologies, className } = props;
+  const { technologies, className, responsibilities } = props;
   return (
     <Fragment>
       <Card
@@ -36,6 +49,7 @@ const CardInfo = ({ title, subTitle, description, ...props }) => {
             {description}
           </p>
         )}
+        {responsibilities && list(responsibilities)}
         {technologies && imageList(technologies)}
       </Card>
     </Fragment>
