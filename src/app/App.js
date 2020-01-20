@@ -11,10 +11,10 @@ const { Content } = Layout;
 const App = () => (
   <Layout>
     <Content>
-      <Col span={8}>
+      <Col xxl={7} xl={7} lg={7} md={24} sm={24} xs={24}>
         <UserProfile userProfile={user.profile} />
       </Col>
-      <Col span={16}>
+      <Col xxl={17} xl={17} lg={17} md={24} sm={24} xs={24}>
         <UserDetails userDetails={user.details} />
       </Col>
     </Content>

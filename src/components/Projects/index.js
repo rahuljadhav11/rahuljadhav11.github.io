@@ -8,7 +8,7 @@ const Projects = ({ projects }) => {
   for (let index = 0; index < projects.length; index += 2) {
     formattedData.push(
       <Row gutter={16} key={`project-${index}`}>
-        <Col span={12}>
+        <Col xxl={12} xl={12} lg={12} md={24} sm={24} xs={24}>
           <CardInfo
             className="projects"
             title={projects[index].title}
@@ -18,7 +18,7 @@ const Projects = ({ projects }) => {
           />
         </Col>
         {projects[index + 1] && (
-          <Col span={12}>
+          <Col xxl={12} xl={12} lg={12} md={24} sm={24} xs={24}>
             <CardInfo
               className="projects"
               title={projects[index + 1].title}
