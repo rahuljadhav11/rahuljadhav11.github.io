@@ -18,6 +18,14 @@
     &:hover {
       box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
     }
+
+    @media only screen and (max-device-width: 990px) and (orientation: landscape) {
+      box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    @media only screen and (max-device-width: 990px) and (orientation: portrait) {
+      box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
+    }
   }
 
   .ant-card-body {

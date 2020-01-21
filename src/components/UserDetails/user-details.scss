@@ -18,9 +18,25 @@
   margin: 30px 30px 30px 15px !important;
   height: calc(100vh - 60px);
 
+  @media only screen and (max-device-width: 990px) and (orientation: landscape) {
+    margin: 30px !important;
+  }
+
+  @media only screen and (max-device-width: 990px) and (orientation: portrait) {
+    margin: 30px !important;
+  }
+
+  @media only screen and (max-device-width: 768px) and (orientation: landscape) {
+    margin: 20px !important;
+  }
+
+  @media only screen and (max-device-width: 768px) and (orientation: portrait) {
+    margin: 20px !important;
+  }
+
   @media only screen and (min-device-width: 2000px) and (orientation: landscape) {
-    margin: 150px 150px 150px 30px !important;
-    height: calc(100vh - 200px);
+    margin: 150px 150px 150px 40px !important;
+    height: calc(100vh - 300px);
   }
 
   .ant-card-head {

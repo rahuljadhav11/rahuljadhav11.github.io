@@ -1,5 +1,37 @@
-.experience {
+.timeline-experience {
+  @media only screen and (max-device-width: 768px) and (orientation: landscape) {
+    margin-left: 30px;
+  }
+
+  @media only screen and (max-device-width: 768px) and (orientation: portrait) {
+    margin-left: 30px;
+  }
+
+  @media only screen and (max-device-width: 500px) and (orientation: landscape) {
+    margin-left: 15px;
+  }
+
+  @media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    margin-left: 15px;
+  }
+
   .company-logo {
-    width: 40%;
+    width: 130px;
+
+    @media only screen and (max-device-width: 768px) and (orientation: landscape) {
+      width: 100px;
+    }
+
+    @media only screen and (max-device-width: 768px) and (orientation: portrait) {
+      width: 100px;
+    }
+
+    @media only screen and (max-device-width: 500px) and (orientation: landscape) {
+      width: 70px;
+    }
+
+    @media only screen and (max-device-width: 500px) and (orientation: portrait) {
+      width: 70px;
+    }
   }
 }

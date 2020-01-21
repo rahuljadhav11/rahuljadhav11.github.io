@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 import CardInfo from "../CardInfo";
 import { Row, Col } from "antd";
+import "./projects.scss"
 
 const Projects = ({ projects }) => {
   const formattedData = [];
 
   for (let index = 0; index < projects.length; index += 2) {
     formattedData.push(
-      <Row gutter={16} key={`project-${index}`}>
+      <Row gutter={16} key={`project-${index}`} className="parent-projects">
         <Col xxl={12} xl={12} lg={12} md={24} sm={24} xs={24}>
           <CardInfo
             className="projects"
@@ -30,7 +31,6 @@ const Projects = ({ projects }) => {
         )}
       </Row>
     );
-    formattedData.push(<br key={`project-br-${index}`} />);
   }
 
   return <Fragment>{formattedData}</Fragment>;
