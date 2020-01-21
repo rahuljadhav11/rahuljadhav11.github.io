@@ -2,6 +2,10 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.4.1",
+    "node": "8.16.2"
+  },
   "dependencies": {
     "antd": "^3.26.4",
     "axios": "^0.18.0",
