@@ -1,0 +1,86 @@
+@import "../../css/global/variables.scss";
+@import "../../css/global/mixins.scss";
+@import "../../css/global/fonts.scss";
+
+.user-profile-card {
+  border: solid 1px $border-color;
+  background-color: #ffffff;
+  transition: 0.5s;
+
+  // Allign items at center
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // Shadow effect
+  box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
+
+  // Margin based on media
+  margin: 30px 15px 30px 30px !important;
+  height: calc(100vh - 60px);
+
+  @media only screen and (min-device-width: 2000px) and (orientation: landscape) {
+    margin: 150px 30px 150px 150px !important;
+    height: calc(100vh - 200px);
+  }
+
+  .ant-card-body {
+    overflow-y: auto;
+  }
+
+  .ant-card-actions {
+    margin-top: auto;
+    align-items: end;
+  }
+
+  .user-profile-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 20px 20px 50px 10px rgba(203, 203, 203, 0.8);
+  }
+
+  .user-name {
+    text-align: center;
+    padding-top: 20px;
+    @include text-formating(
+      30px,
+      $black-color,
+      normal,
+      bold,
+      "Cadiz-Bold"
+    );
+    letter-spacing: 0.20px;
+  }
+
+  .user-info {
+    text-align: center;
+    padding-top: 10px;
+    @include text-formating(
+      14px,
+      $text-color,
+      normal,
+      normal,
+      "Cadiz-Regular"
+    );
+    letter-spacing: 0.20px;
+  }
+
+  .user-objective {
+    margin-top: 50px;
+    @include text-formating(
+      14px,
+      $text-color,
+      normal,
+      normal,
+      "Cadiz-Regular"
+    );
+    letter-spacing: 0.20px;
+  }
+
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+  }
+}

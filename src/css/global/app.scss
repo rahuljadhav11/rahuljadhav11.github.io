@@ -1,0 +1,43 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+body {
+  font-family: "Cadiz-Regular";
+  font-size: 0.6875rem;
+}
+
+.ant-layout {
+  background-color: $body-background !important;
+  height: 100vh;
+}
+
+.ant-avatar-square {
+  border-radius: 0px;
+}
+
+.ant-timeline {
+  padding: 12px;
+}
+
+.ant-tabs-tab {
+  font-family: "Cadiz-Regular";
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 20px;
+}
