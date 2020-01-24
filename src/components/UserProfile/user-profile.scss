@@ -42,6 +42,7 @@
 
   .ant-card-body {
     overflow-y: auto;
+    padding-bottom: 0px !important;
   }
 
   .ant-card-actions {
@@ -58,9 +59,9 @@
 
   .user-name {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 16px;
     @include text-formating(
-      30px,
+      25px,
       $black-color,
       normal,
       bold,
@@ -83,7 +84,7 @@
   }
 
   .user-objective {
-    margin-top: 50px;
+    margin: 25px 0;
     @include text-formating(
       14px,
       $text-color,
@@ -94,9 +95,46 @@
     letter-spacing: 0.20px;
   }
 
-  .ant-carousel .slick-slide {
-    text-align: center;
-    height: 80px;
-    line-height: 80px;
+  .hobbies {
+    .header {
+      @include text-formating(
+        14px,
+        $black-color,
+        normal,
+        bold,
+        "Cadiz-Bold"
+      );
+      letter-spacing: 0.20px;
+      text-align: center;
+
+      &:after {
+        content: "";
+        background-color: rgba(151, 151, 151, 0.4);
+        width: 100%;
+        height: 1px;
+        position: relative;
+        display: inline-block;
+        left: 0;
+        top: -5px;
+      }
+    }
+
+    .avatar {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ant-col:nth-child(2), .ant-col:nth-child(3) {
+      &:after {
+        content: "";
+        border-right: 1px solid $border-color;
+        width: 1px;
+        height: 100%;
+        position: relative;
+        right: 10px;
+        bottom: 30px;
+      }
+    }
   }
 }

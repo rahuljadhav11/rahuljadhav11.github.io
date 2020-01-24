@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Avatar, Tooltip, Row, Col } from "antd";
-import { titleize } from "../../utils/helper";
+import { Card, Avatar, Tooltip, Row, Col, Carousel } from "antd";
+import { titleize, group } from "../../utils/helper";
 import "./user-profile.scss";
 
 const actions = userActions =>
@@ -16,54 +16,33 @@ const actions = userActions =>
     </Tooltip>
   ));
 
-const hobbies = () => (
-  <Row className="hobbies" gutter={16}>
-    <Col span={5}>
-      <Avatar
-        className="avatar"
-        src={require(`../../assets/images/hackerrank.svg`)}
-        shape="square"
-        alt="blender"
-        size={64}
-      />
-    </Col>
-    <Col span={5}>
-      <Avatar
-        className="avatar"
-        src={require(`../../assets/images/ruby.svg`)}
-        shape="square"
-        alt="blender"
-        size={64}
-      />
-    </Col>
-    <Col span={5}>
-      <Avatar
-        className="avatar"
-        src={require(`../../assets/images/git.svg`)}
-        shape="square"
-        alt="blender"
-        size={64}
-      />
-    </Col>
-    <Col span={5}>
-      <Avatar
-        className="avatar"
-        src={require(`../../assets/images/jira.svg`)}
-        shape="square"
-        alt="blender"
-        size={64}
-      />
-    </Col>
-    <Col span={5}>
-      <Avatar
-        className="avatar"
-        src={require(`../../assets/images/haml.svg`)}
-        shape="square"
-        alt="blender"
-        size={64}
-      />
-    </Col>
-  </Row>
+const randerWhatILike = allHobbies => (
+  <div className="hobbies">
+    <div className="header">Hobbies</div>
+    <Carousel autoplay dots={false}>
+      {
+        group(allHobbies, 3).map(hobbies => (
+          <Row gutter={16}>
+          {
+            hobbies.map(hobby => (
+              <Col span={8}>
+                <Tooltip title={hobby}>
+                  <Avatar
+                    className="avatar"
+                    src={require(`../../assets/images/${hobby}.svg`)}
+                    shape="square"
+                    alt={hobby}
+                    size={48}
+                  />
+                </Tooltip>
+              </Col>
+            ))
+          }
+          </Row>
+        ))
+      }
+    </Carousel>
+  </div>
 );
 
 const UserProfile = ({ userProfile }) => (
@@ -83,13 +62,14 @@ const UserProfile = ({ userProfile }) => (
       />
     </Row>
     <Row className="user-name">{userProfile.name}</Row>
-    <Row className="user-info">Contact No. - {userProfile.contact_number}</Row>
+    <Row className="user-info">Contact No - {userProfile.contact_number}</Row>
     <Row className="user-info">Email - {userProfile.email}</Row>
     <Row>
       <p align="justify" className="user-objective">
         {userProfile.about_me}
       </p>
     </Row>
+    <Row>{randerWhatILike(userProfile.hobbies)}</Row>
   </Card>
 );
 
