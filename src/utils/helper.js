@@ -10,3 +10,16 @@ export const titleize = str => {
 
   return string_array.join(" ");
 };
+
+export const group = (array, length) => {
+  const groupedArray = [];
+  let tempArray = [];
+  array.forEach((item, index) => {
+    tempArray.push(item);
+    if ((index + 1) % length === 0 || index + 1 === array.length) {
+      groupedArray.push(tempArray);
+      tempArray = [];
+    }
+  });
+  return groupedArray;
+};
