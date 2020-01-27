@@ -5,6 +5,7 @@
 .user-profile-card {
   border: solid 1px $border-color;
   background-color: #ffffff;
+  transition: 0.5s;
 
   // Allign items at center
   display: flex;
