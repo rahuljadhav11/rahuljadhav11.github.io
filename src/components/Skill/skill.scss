@@ -9,11 +9,10 @@
     @include text-formating(
       16px,
       $black-color,
-      normal,
       bold,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.20px;
 
     &:after {
       content: "";

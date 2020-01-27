@@ -5,7 +5,6 @@
 .user-profile-card {
   border: solid 1px $border-color;
   background-color: #ffffff;
-  transition: 0.5s;
 
   // Allign items at center
   display: flex;
@@ -42,7 +41,6 @@
 
   .ant-card-body {
     overflow-y: auto;
-    padding-bottom: 0px !important;
   }
 
   .ant-card-actions {
@@ -61,13 +59,12 @@
     text-align: center;
     padding-top: 16px;
     @include text-formating(
-      25px,
+      30px,
       $black-color,
-      normal,
       bold,
-      "Cadiz-Bold"
+      "Cadiz-Bold",
+      0.20px
     );
-    letter-spacing: 0.20px;
   }
 
   .user-info {
@@ -77,10 +74,9 @@
       14px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.20px;
   }
 
   .user-objective {
@@ -89,23 +85,21 @@
       14px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.20px;
   }
 
   .hobbies {
     .header {
+      text-align: center;
       @include text-formating(
         14px,
         $black-color,
-        normal,
         bold,
-        "Cadiz-Bold"
+        "Cadiz-Bold",
+        0.20px
       );
-      letter-spacing: 0.20px;
-      text-align: center;
 
       &:after {
         content: "";

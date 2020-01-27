@@ -40,11 +40,10 @@
     @include text-formating(
       16px,
       $text-color,
-      normal,
       bold,
-      "Cadiz-Bold"
+      "Cadiz-Bold",
+      0.20px
     );
-    letter-spacing: 0.2px;
 
     &:after {
       content: "";
@@ -60,13 +59,12 @@
 
   .sub-title {
     @include text-formating(
-      10px,
+      11px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.2px;
   }
 
   .description {
@@ -75,10 +73,9 @@
       13px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.2px;
   }
 
   .technology-images {
@@ -111,15 +108,14 @@
     align-items: baseline;
 
     .header {
+      text-align: left;
       @include text-formating(
         14px,
         $text-color,
-        normal,
         bold,
-        "Cadiz-Bold"
+        "Cadiz-Bold",
+        0.2px
       );
-      letter-spacing: 0.2px;
-      text-align: left;
 
       &:after {
         content: "";
@@ -138,10 +134,9 @@
         13px,
         $text-color,
         normal,
-        normal,
-        "Cadiz-Regular"
+        "Cadiz-Regular",
+        0.20px
       );
-      letter-spacing: 0.2px;
     }
   }
 }

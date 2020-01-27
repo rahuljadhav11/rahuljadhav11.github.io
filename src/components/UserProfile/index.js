@@ -18,29 +18,25 @@ const actions = userActions =>
 
 const randerWhatILike = allHobbies => (
   <div className="hobbies">
-    <div className="header">Hobbies</div>
+    <div className="header">I Like</div>
     <Carousel autoplay dots={false}>
-      {
-        group(allHobbies, 3).map(hobbies => (
-          <Row gutter={16}>
-          {
-            hobbies.map(hobby => (
-              <Col span={8}>
-                <Tooltip title={hobby}>
-                  <Avatar
-                    className="avatar"
-                    src={require(`../../assets/images/${hobby}.svg`)}
-                    shape="square"
-                    alt={hobby}
-                    size={48}
-                  />
-                </Tooltip>
-              </Col>
-            ))
-          }
-          </Row>
-        ))
-      }
+      {group(allHobbies, 3).map((hobbies, index) => (
+        <Row key={index} gutter={16}>
+          {hobbies.map(hobby => (
+            <Col key={hobby} span={8}>
+              <Tooltip title={titleize(hobby)}>
+                <Avatar
+                  className="avatar"
+                  src={require(`../../assets/images/${hobby}.svg`)}
+                  shape="square"
+                  alt={hobby}
+                  size={64}
+                />
+              </Tooltip>
+            </Col>
+          ))}
+        </Row>
+      ))}
     </Carousel>
   </div>
 );
