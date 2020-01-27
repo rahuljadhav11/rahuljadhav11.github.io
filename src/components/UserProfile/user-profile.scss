@@ -120,16 +120,9 @@
       margin-right: auto;
     }
 
-    .ant-col:nth-child(2), .ant-col:nth-child(3) {
-      &:after {
-        content: "";
-        border-right: 1px solid $border-color;
-        width: 1px;
-        height: 100%;
-        position: relative;
-        right: 10px;
-        bottom: 30px;
-      }
+    .name {
+      text-align: center;
+      margin-top: 5px;
     }
   }
 }

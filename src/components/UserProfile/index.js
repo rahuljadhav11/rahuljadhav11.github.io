@@ -32,6 +32,7 @@ const randerWhatILike = allHobbies => (
                   alt={hobby}
                   size={64}
                 />
+                <div className="name">{titleize(hobby)}</div>
               </Tooltip>
             </Col>
           ))}
