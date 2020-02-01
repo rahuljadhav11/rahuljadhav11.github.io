@@ -30,7 +30,7 @@ const randerWhatILike = allHobbies => (
                   src={require(`../../assets/images/${hobby}.svg`)}
                   shape="square"
                   alt={hobby}
-                  size={64}
+                  size={48}
                 />
                 <div className="name">{titleize(hobby)}</div>
               </Tooltip>

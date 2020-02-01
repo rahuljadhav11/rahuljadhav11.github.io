@@ -4,7 +4,7 @@
 
 .skills {
   padding: 12px;
-  
+
   .title {
     @include text-formating(
       16px,
@@ -27,11 +27,7 @@
   }
 
   .technology-images {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    .ant-col.ant-col-xs-24.ant-col-sm-12.ant-col-md-8.ant-col-lg-6.ant-col-xl-6.ant-col-xxl-4 {
+    .ant-col {
       padding-top: 8px;
       padding-bottom: 8px;
     }

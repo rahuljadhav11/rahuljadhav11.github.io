@@ -2,7 +2,7 @@
 @import "../../css/global/mixins.scss";
 @import "../../css/global/fonts.scss";
 
-.experience {
+.education {
   transition: 0.5s;
 
   .details {
@@ -13,13 +13,13 @@
       box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.15);
     }
 
-    .company-info-wrapper {
+    .wrapper {
       margin: 15px;
       text-align: center;
 
-      .designation {
+      .degreeAbbreviation {
         @include text-formating(
-          25px,
+          22px,
           $text-color,
           bold,
           "Cadiz-Bold",
@@ -27,7 +27,7 @@
         );
       }
 
-      .info {
+      .degree {
         margin-top: 5px;
         @include text-formating(
           14px,
@@ -64,7 +64,7 @@
       }
     }
 
-    .card-info.experience {
+    .card-info.education {
       position: relative;
 
       &:before {

@@ -13,14 +13,20 @@ const companyInfo = companyDetails => (
 
 const companyLogo = companyDetails => (
   <Card className="company-info-wrapper" bordered={false}>
-    <div className="company-name">{companyDetails.designation}</div>
+    <div className="designation">{companyDetails.designation}</div>
     <div className="info">{companyDetails.period}</div>
     {companyDetails.logo && (
-      <img
-        className="company-logo"
-        src={require(`../../assets/images/${companyDetails.logo}.svg`)}
-        alt=""
-      />
+      <a
+        href={companyDetails.companyLink}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          className="company-logo"
+          src={require(`../../assets/images/${companyDetails.logo}.svg`)}
+          alt=""
+        />
+      </a>
     )}
   </Card>
 );

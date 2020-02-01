@@ -54,6 +54,7 @@ export const user = {
       {
         company: "Josh software Pvt. Ltd, ​Pune",
         logo: "josh",
+        companyLink: "https://joshsoftware.com",
         designation: "Software Engineer",
         period: "JUN 2018 - PRESENT",
         description:
@@ -71,6 +72,7 @@ export const user = {
       {
         company: "Josh software Pvt. Ltd, ​Pune",
         logo: "josh",
+        companyLink: "https://joshsoftware.com",
         designation: "​Intern",
         period: "JAN 2018 - MAY 2018",
         description:
@@ -139,19 +141,22 @@ export const user = {
     education: [
       {
         institute: "Walchand College Of Engineering, Sangli",
-        degree: "B.Tech",
+        degreeAbbreviation: "B.Tech",
+        degree: "Bachelor of Technology in Information Technology",
         period: "JUL 2014 - MAY 2018",
         marks: "CPI - 8.1"
       },
       {
         institute: "Maharashtra Junior College, ​Latur",
-        degree: "HSC",
+        degreeAbbreviation: "HSC",
+        degree: "Higher Secondary Certificate",
         period: "JUL 2012 - MAY 2014",
         marks: "Percentage - 76.15%"
       },
       {
         institute: "Jawahar Navodaya Vidyalaya, ​Latur",
-        degree: "SSC",
+        degreeAbbreviation: "SSC",
+        degree: "Secondary School Certificate",
         period: "JUL 2011 - MAY 2012",
         marks: "CGPA - 9.4"
       }
