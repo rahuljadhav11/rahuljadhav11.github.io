@@ -1,37 +1,101 @@
-.timeline-experience {
-  @media only screen and (max-device-width: 768px) and (orientation: landscape) {
-    margin-left: 30px;
-  }
+@import "../../css/global/variables.scss";
+@import "../../css/global/mixins.scss";
+@import "../../css/global/fonts.scss";
 
-  @media only screen and (max-device-width: 768px) and (orientation: portrait) {
-    margin-left: 30px;
-  }
+.experience {
+  transition: 0.5s;
 
-  @media only screen and (max-device-width: 500px) and (orientation: landscape) {
-    margin-left: 15px;
-  }
+  .details {
+    margin: 12px 12px 24px 12px;
+    box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
 
-  @media only screen and (max-device-width: 500px) and (orientation: portrait) {
-    margin-left: 15px;
-  }
-
-  .company-logo {
-    width: 130px;
-
-    @media only screen and (max-device-width: 768px) and (orientation: landscape) {
-      width: 100px;
+    &:hover {
+      box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.15);
     }
 
-    @media only screen and (max-device-width: 768px) and (orientation: portrait) {
-      width: 100px;
+    .company-info-wrapper {
+      margin: 15px;
+      text-align: center;
+
+      .company-name {
+        @include text-formating(
+          25px,
+          $text-color,
+          bold,
+          "Cadiz-Bold",
+          0.20px
+        );
+      }
+
+      .info {
+        margin-top: 5px;
+        @include text-formating(
+          14px,
+          $text-color,
+          normal,
+          "Cadiz-Regular",
+          0.20px
+        );
+      }
+
+      .company-logo {
+        margin-top: 15px;
+        width: 150px;
+
+        @media only screen and (max-device-width: 1368px) and (orientation: landscape) {
+          width: 130px;
+        }
+
+        @media only screen and (max-device-width: 768px) and (orientation: landscape) {
+          width: 130px;
+        }
+
+        @media only screen and (max-device-width: 768px) and (orientation: portrait) {
+          width: 130px;
+        }
+
+        @media only screen and (max-device-width: 500px) and (orientation: landscape) {
+          width: 100px;
+        }
+
+        @media only screen and (max-device-width: 500px) and (orientation: portrait) {
+          width: 100px;
+        }
+      }
     }
 
-    @media only screen and (max-device-width: 500px) and (orientation: landscape) {
-      width: 70px;
-    }
+    .card-info.experience {
+      position: relative;
 
-    @media only screen and (max-device-width: 500px) and (orientation: portrait) {
-      width: 70px;
+      &:before {
+        content: "";
+        border-right: 2px solid #e8e8e8;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+      }
+
+      @media only screen and (max-device-width: 767px) and (orientation: landscape) {
+        &:before {
+          content: "";
+          border-top: 2px solid #e8e8e8;
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          left: 0px
+        }
+      }
+
+      @media only screen and (max-device-width: 767px) and (orientation: portrait) {
+        &:before {
+          content: "";
+          border-top: 2px solid #e8e8e8;
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          left: 0px
+        }
+      }
     }
   }
 }
