@@ -4,6 +4,7 @@
 
 .image {
   text-align: center;
+  transition: 0.5s;
 
   // Shadow effect
   box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
@@ -22,10 +23,9 @@
         14px,
         $black-color,
         normal,
-        normal,
-        "Cadiz-Regular"
+        "Cadiz-Regular",
+        0.20px
       );
-      letter-spacing: 0.20px;
     }
   }
 }

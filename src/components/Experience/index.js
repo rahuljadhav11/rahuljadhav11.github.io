@@ -1,81 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CardInfo from "../CardInfo";
-import { Timeline, Icon } from "antd";
+import { Card, Row, Col } from "antd";
 import "./experience.scss";
 
-const { Item } = Timeline;
-
-const timelineItems = companyDetails =>
-  companyDetails.map((item, index) => {
-    const dotType = index === 0 ? "clock-circle" : "check-circle";
-    const color = index === 0 ? "blue" : "green";
-
-    return (
-      <Item
-        key={`${item.designation} - ${item.company}`}
-        dot={<Icon type={dotType} style={{ fontSize: "16px" }} />}
-        color={color}
-      >
-        <CardInfo
-          className="experience"
-          title={`${item.designation} @ ${item.company}`}
-          subTitle={item.period}
-          description={item.description}
-          responsibilities={item.responsibilities}
-        />
-      </Item>
-    );
-  });
-
-const companyLogo = logo => (
-  <Item
-    key={logo}
-    dot={
-      <img
-        className="company-logo"
-        src={require(`../../assets/images/${logo}`)}
-        alt=""
-      />
-    }
-  >
-    <br />
-    <br />
-  </Item>
+const companyInfo = companyDetails => (
+  <CardInfo
+    className="experience"
+    description={companyDetails.description}
+    responsibilities={companyDetails.responsibilities}
+  />
 );
 
-const Experience = ({ experience }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const companyLogo = companyDetails => (
+  <Card className="company-info-wrapper" bordered={false}>
+    <div className="designation">{companyDetails.designation}</div>
+    <div className="info">{companyDetails.period}</div>
+    {companyDetails.logo && (
+      <a
+        href={companyDetails.companyLink}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          className="company-logo"
+          src={require(`../../assets/images/${companyDetails.logo}.svg`)}
+          alt=""
+        />
+      </a>
+    )}
+  </Card>
+);
 
-  useEffect(() => {
-    const handleWindowSizeChange = () => {
-      setWindowWidth(window.innerWidth);
-    };
+const items = companyDetails => (
+  <Card
+    key={`${companyDetails.designation} @ ${companyDetails.company}`}
+    className="details"
+  >
+    <Row
+      key={`${companyDetails.designation} @ ${companyDetails.company}`}
+      type="flex"
+      align="middle"
+    >
+      <Col xxl={8} xl={8} lg={8} md={8} sm={24} xs={24}>
+        {companyLogo(companyDetails)}
+      </Col>
+      <Col xxl={16} xl={16} lg={16} md={16} sm={24} xs={24}>
+        {companyInfo(companyDetails)}
+      </Col>
+    </Row>
+  </Card>
+);
 
-    window.addEventListener("resize", handleWindowSizeChange);
-    // make sure to remove the listener
-    // when the component is not mounted anymore
-    return function cleanup() {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  const timelineMode = () => {
-    if (windowWidth <= 768) {
-      return "left";
-    }
-    return "alternate";
-  };
-
-  return (
-    <Timeline mode={timelineMode()} className="timeline-experience">
-      {experience.map((company, index) => {
-        const items = timelineItems(company.details);
-        items.unshift(companyLogo(company.logo));
-
-        return items;
-      })}
-    </Timeline>
-  );
-};
+const Experience = ({ experience }) => (
+  <div className="experience">{experience.map(company => items(company))}</div>
+);
 
 export default Experience;

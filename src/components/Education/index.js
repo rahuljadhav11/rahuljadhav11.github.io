@@ -1,51 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CardInfo from "../CardInfo";
-import { Timeline, Icon } from "antd";
+import { Card, Row, Col } from "antd";
+import "./education.scss";
 
-const { Item } = Timeline;
+const marksInfo = details => (
+  <CardInfo
+    className="education"
+    title={details.institute}
+    description={details.marks}
+  />
+);
 
-const Education = ({ education }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const degreeInfo = details => (
+  <Card className="wrapper" bordered={false}>
+    <div className="degreeAbbreviation">{details.degreeAbbreviation}</div>
+    <div className="degree">({details.degree})</div>
+  </Card>
+);
 
-useEffect(() => {
-  const handleWindowSizeChange = () => {
-    setWindowWidth(window.innerWidth);
-  };
+const items = details => (
+  <Card key={details.institute} className="details">
+    <Row key={details.institute} type="flex" align="middle">
+      <Col xxl={8} xl={8} lg={8} md={8} sm={24} xs={24}>
+        {degreeInfo(details)}
+      </Col>
+      <Col xxl={16} xl={16} lg={16} md={16} sm={24} xs={24}>
+        {marksInfo(details)}
+      </Col>
+    </Row>
+  </Card>
+);
 
-  window.addEventListener("resize", handleWindowSizeChange);
-  // make sure to remove the listener
-  // when the component is not mounted anymore
-  return function cleanup() {
-    window.removeEventListener("resize", handleWindowSizeChange);
-  };
-}, []);
-
-const timelineMode = () => {
-  if (windowWidth <= 768) {
-    return "left";
-  }
-  return "alternate";
-};
-
-
-  return (
-    <Timeline mode={timelineMode()}>
-      {education.map(item => (
-        <Item
-          key={item.degree}
-          dot={<Icon type="check-circle" style={{ fontSize: "16px" }} />}
-          color="green"
-        >
-          <CardInfo
-            className="education"
-            title={`${item.degree} - ${item.institute}`}
-            subTitle={item.period}
-            description={item.marks}
-          />
-        </Item>
-      ))}
-    </Timeline>
-  );
-};
+const Education = ({ education }) => (
+  <div className="education">{education.map(item => items(item))}</div>
+);
 
 export default Education;

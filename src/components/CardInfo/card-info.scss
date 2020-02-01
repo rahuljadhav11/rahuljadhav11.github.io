@@ -5,15 +5,6 @@
 .card-info {
   transition: 0.5s;
 
-  // Shadow effect
-  &.experience, &.education {
-    box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
-
-    &:hover {
-      box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.15);
-    }
-  }
-
   &.projects {
     &:hover {
       box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
@@ -40,11 +31,10 @@
     @include text-formating(
       16px,
       $text-color,
-      normal,
       bold,
-      "Cadiz-Bold"
+      "Cadiz-Bold",
+      0.20px
     );
-    letter-spacing: 0.2px;
 
     &:after {
       content: "";
@@ -60,13 +50,12 @@
 
   .sub-title {
     @include text-formating(
-      10px,
+      11px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.2px;
   }
 
   .description {
@@ -75,10 +64,9 @@
       13px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.2px;
   }
 
   .technology-images {
@@ -112,15 +100,14 @@
     align-items: baseline;
 
     .header {
+      text-align: left;
       @include text-formating(
         14px,
         $text-color,
-        normal,
         bold,
-        "Cadiz-Bold"
+        "Cadiz-Bold",
+        0.2px
       );
-      letter-spacing: 0.2px;
-      text-align: left;
 
       &:after {
         content: "";
@@ -139,10 +126,9 @@
         13px,
         $text-color,
         normal,
-        normal,
-        "Cadiz-Regular"
+        "Cadiz-Regular",
+        0.20px
       );
-      letter-spacing: 0.2px;
     }
   }
 }

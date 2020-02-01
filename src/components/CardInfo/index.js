@@ -40,7 +40,6 @@ const CardInfo = ({ title, subTitle, description, ...props }) => {
         key={title}
         className={`card-info ${className}`}
         bordered={false}
-        hoverable
       >
         {title && <div className="title">{title}</div>}
         {subTitle && <div className="sub-title">{subTitle}</div>}

@@ -58,15 +58,14 @@
 
   .user-name {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 16px;
     @include text-formating(
       30px,
       $black-color,
-      normal,
       bold,
-      "Cadiz-Bold"
+      "Cadiz-Bold",
+      0.20px
     );
-    letter-spacing: 0.20px;
   }
 
   .user-info {
@@ -76,27 +75,54 @@
       14px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.20px;
   }
 
   .user-objective {
-    margin-top: 50px;
+    margin: 25px 0;
     @include text-formating(
       14px,
       $text-color,
       normal,
-      normal,
-      "Cadiz-Regular"
+      "Cadiz-Regular",
+      0.20px
     );
-    letter-spacing: 0.20px;
   }
 
-  .ant-carousel .slick-slide {
-    text-align: center;
-    height: 80px;
-    line-height: 80px;
+  .hobbies {
+    .header {
+      text-align: center;
+      @include text-formating(
+        14px,
+        $black-color,
+        bold,
+        "Cadiz-Bold",
+        0.20px
+      );
+
+      &:after {
+        content: "";
+        background-color: rgba(151, 151, 151, 0.4);
+        width: 100%;
+        height: 1px;
+        position: relative;
+        display: inline-block;
+        left: 0;
+        top: -5px;
+      }
+    }
+
+    .avatar {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .name {
+      text-align: center;
+      margin-top: 5px;
+    }
   }
 }
