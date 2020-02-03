@@ -5,7 +5,7 @@ import "./user-profile.scss";
 
 const actions = userActions =>
   userActions.map(action => (
-    <Tooltip placement="top" title={titleize(action.name)}>
+    <Tooltip placement="bottom" title={titleize(action.name)}>
       <a href={action.link} rel="noopener noreferrer" target="_blank">
         <Avatar
           src={require(`../../assets/images/${action.name}.svg`)}
@@ -24,16 +24,14 @@ const randerWhatILike = allHobbies => (
         <Row key={index} gutter={16}>
           {hobbies.map(hobby => (
             <Col key={hobby} span={8}>
-              <Tooltip title={titleize(hobby)}>
-                <Avatar
-                  className="avatar"
-                  src={require(`../../assets/images/${hobby}.svg`)}
-                  shape="square"
-                  alt={hobby}
-                  size={48}
-                />
-                <div className="name">{titleize(hobby)}</div>
-              </Tooltip>
+              <Avatar
+                className="avatar"
+                src={require(`../../assets/images/${hobby}.svg`)}
+                shape="square"
+                alt={hobby}
+                size={48}
+              />
+              <div className="name">{titleize(hobby)}</div>
             </Col>
           ))}
         </Row>
