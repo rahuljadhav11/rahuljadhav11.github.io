@@ -7,6 +7,7 @@
 
   .details {
     margin: 12px 12px 24px 12px;
+    border-radius: 0px;
     box-shadow: 0 6px 16px 0px rgba(0, 0, 0, 0.2);
 
     &:hover {
@@ -36,31 +37,6 @@
           "Cadiz-Regular",
           0.20px
         );
-      }
-
-      .company-logo {
-        margin-top: 15px;
-        width: 150px;
-
-        @media only screen and (max-device-width: 1368px) and (orientation: landscape) {
-          width: 130px;
-        }
-
-        @media only screen and (max-device-width: 768px) and (orientation: landscape) {
-          width: 130px;
-        }
-
-        @media only screen and (max-device-width: 768px) and (orientation: portrait) {
-          width: 130px;
-        }
-
-        @media only screen and (max-device-width: 500px) and (orientation: landscape) {
-          width: 100px;
-        }
-
-        @media only screen and (max-device-width: 500px) and (orientation: portrait) {
-          width: 100px;
-        }
       }
     }
 
@@ -95,6 +71,11 @@
           position: absolute;
           left: 0px
         }
+      }
+
+      .description {
+        font-size: 14px;
+        font-weight: 500;
       }
     }
   }

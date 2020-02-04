@@ -4,7 +4,7 @@ export const user = {
     contact_number: "9404378965",
     email: "rahul.rj9421@gmail.com",
     about_me:
-      "Hi there, I am a full stack developer, currently working at Josh Software having one and a half years of experience in media industry. I like to work on new challenging technology problems. My area of interest are Data Structures, Algorithms, OOP Programming and Web Development. I am seeking a interesting opportunity where i can put my thoughts to solve real life problems.",
+      "Hi there, I am a full stack developer, currently working at Josh Software having one and a half years of experience in media industry. I like to work on new challenging technology problems. My areas of interest are Data Structures, Algorithms, OOP Programming and Web Development. I am seeking a interesting opportunity where i can put my thoughts to solve real life problems.",
     actions: [
       {
         name: "linkedin",
