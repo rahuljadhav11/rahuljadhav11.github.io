@@ -9,13 +9,13 @@ import "./user-details.scss";
 const iconForHeader = header => {
   switch (header) {
     case "experience":
-      return <Icon type="hourglass" theme="filled" />;
+      return <Icon type="hourglass" theme="twoTone" />;
     case "projects":
-      return <Icon type="project" theme="filled" />;
+      return <Icon type="project" theme="twoTone" />;
     case "education":
-      return <Icon type="read" theme="filled" />;
+      return <Icon type="book" theme="twoTone" />;
     case "skills":
-      return <Icon type="code" theme="filled" />;
+      return <Icon type="code" theme="twoTone" />;
     default:
       return "";
   }
