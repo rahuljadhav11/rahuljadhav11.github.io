@@ -4,7 +4,7 @@ export const user = {
     contact_number: "9404378965",
     email: "rahul.rj9421@gmail.com",
     about_me:
-      "Hi there, I am a full stack developer, currently working at Josh Software having one and a half years of experience in media industry. I like to work on new challenging technology problems. My areas of interest are Data Structures, Algorithms, OOP Programming and Web Development. I am seeking a interesting opportunity where i can put my thoughts to solve real life problems.",
+      "Hi there, I am a full stack developer, currently working at Josh Software having one and a half years of experience in the media industry. I like to work on new challenging technology problems. My areas of interest are Data Structures, Algorithms, OOP Programming and Web Development. I am seeking an interesting opportunity where I can put my thoughts to solve real life problems.",
     actions: [
       {
         name: "linkedin",
@@ -58,11 +58,11 @@ export const user = {
         designation: "Software Engineer",
         period: "JUN 2018 - PRESENT",
         description:
-          "Technology experts and solution providers in various domains, uses Ruby on Rails and ReactJs platform to provide solution to end users in marketing domain.",
+          "Technology experts and solution providers in various domains, use Ruby on Rails and ReactJs platform to provide solutions to end users in the marketing domain.",
         responsibilities: [
           "Designing and Writing RESTful Apis.",
           "Writing optimized and testable code by understanding system requirements.",
-          "Following TDD process to build better system.",
+          "Following the TDD process to build a better system.",
           "Integrating application with third party Apis.",
           "Understanding and prioritizing system requirements.",
           "Building UI components for better user experience."
@@ -76,7 +76,7 @@ export const user = {
         designation: "​Intern",
         period: "JAN 2018 - MAY 2018",
         description:
-          "Worked on open source project based on ruby on rails platform. Open source project to motivate and reward open source contributors based on quality of commits and activities.",
+          "Worked on an open source project based on ruby on rails platform. Open source project to motivate and reward open source contributors based on quality of commits and activities.",
         responsibilities: [
           "Designing and Writing RESTful Apis.",
           "Writing optimized and testable code by understanding system requirements.",
@@ -91,21 +91,21 @@ export const user = {
         title: "MINT - Sports - Current Project",
         sub_title: "JUL 2019 - PRESENT",
         description:
-          "The project is focused on sales and prs team of star sports to handle their ad-sales business for sport channels. It helps them to move from manual to automated processing. It also helps stakeholders to get the entire visibility of their available and booked inventory in various views. It sets specific workflow for sales-advertisement department.",
+          "The project is focused on sales and prs team of star sports to handle their ad-sales business for sport channels. It helps them to move from manual to automated processing. It also helps stakeholders to get the entire visibility of their available and booked inventory in various views. It sets specific workflow for the sales-advertisement department.",
         technologies: "rails, ruby, react, redux, psql, jira"
       },
       {
         title: "MINT - Entertainment",
         sub_title: "JUL 2018 - JUN 2019",
         description:
-          "The project is focused on sales team of star tv to handle their ad-sales business for entertainment channels. It helps them to move from manual to automated processing. It also helps stakeholders to get the entire visibility of their inventory by products. Idea is same as MINT-sports project but in different areas.",
+          "The project is focused on the sales team of star tv to handle their ad-sales business for entertainment channels. It helps them to move from manual to automated processing. It also helps stakeholders to get the entire visibility of their inventory by products. Idea is same as the MINT-sports project but in different areas.",
         technologies: "rails, ruby, react, redux, psql, jira"
       },
       {
         title: "Code-curiosity - Internship project",
         sub_title: "JAN 2018 - JUN 2018",
         description:
-          "Open source project to motivate and reward open source contributors based on quality of commits and activities. Using github apis to get required data of users commits and activities, applying scoring algorithm on them to give user a motivational reward.",
+          "Open source project to motivate and reward open source contributors based on quality of commits and activities. Using github apis to get required data of user's commits and activities, applying a scoring algorithm on them to give users a motivational reward.",
         technologies: "rails, ruby, javascript, jquery, haml, mongodb"
       },
       {
