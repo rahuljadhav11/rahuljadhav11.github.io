@@ -70,7 +70,7 @@
 
       &:before {
         content: "";
-        border-right: 2px solid #e8e8e8;
+        border-right: 1px solid rgba(151, 151, 151, 0.4);
         height: 100%;
         position: absolute;
         left: 0px;
@@ -79,7 +79,7 @@
       @media only screen and (max-device-width: 767px) and (orientation: landscape) {
         &:before {
           content: "";
-          border-top: 2px solid #e8e8e8;
+          border-top: 1px solid rgba(151, 151, 151, 0.4);
           height: 1px;
           width: 100%;
           position: absolute;
@@ -90,7 +90,7 @@
       @media only screen and (max-device-width: 767px) and (orientation: portrait) {
         &:before {
           content: "";
-          border-top: 2px solid #e8e8e8;
+          border-top: 1px solid rgba(151, 151, 151, 0.4);
           height: 1px;
           width: 100%;
           position: absolute;

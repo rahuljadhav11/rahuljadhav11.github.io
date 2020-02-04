@@ -57,8 +57,8 @@ const UserProfile = ({ userProfile }) => (
       />
     </Row>
     <Row className="user-name">{userProfile.name}</Row>
-    <Row className="user-info">Contact No - {userProfile.contact_number}</Row>
-    <Row className="user-info">Email - {userProfile.email}</Row>
+    <Row className="user-info"><u>Contact No - {userProfile.contact_number}</u></Row>
+    <Row className="user-info"><u>Email - {userProfile.email}</u></Row>
     <Row>
       <p align="justify" className="user-objective">
         {userProfile.about_me}
