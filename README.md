@@ -1,5 +1,5 @@
 # Portfolio
-My personal portfolio.
+Personal portfolio.
 
 Technology Used:
 1. ReactJs
