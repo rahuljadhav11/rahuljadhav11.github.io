@@ -23,7 +23,7 @@ const randerWhatILike = allHobbies => (
       {group(allHobbies, 3).map((hobbies, index) => (
         <Row key={index} gutter={16}>
           {hobbies.map(hobby => (
-            <Col key={hobby} span={8}>
+            <Col key={hobby} span={8} className="avatar-wrapper">
               <Avatar
                 className="avatar"
                 src={require(`../../assets/images/${hobby}.svg`)}
