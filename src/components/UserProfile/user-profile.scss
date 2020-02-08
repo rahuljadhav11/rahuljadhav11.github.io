@@ -138,5 +138,13 @@
         margin-top: 5px;
       }
     }
+
+    .ant-carousel .slick-dots-bottom {
+      bottom: -5px;
+
+      button {
+        background: $black-color;
+      }
+    }
   }
 }

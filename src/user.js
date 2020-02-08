@@ -58,7 +58,7 @@ export const user = {
         designation: "Software Engineer",
         period: "JUN 2018 - PRESENT",
         description:
-          "Technology experts and solution providers in various domains, use Ruby on Rails and ReactJs platform to provide solutions to end users in the marketing domain.",
+          "Worked on projects in media domain based on Ruby on Rails and ReactJs platform. Build a digital platform to automate ad-sales business which provides entire visibility of advertising inventory and revenue.",
         responsibilities: [
           "Designing and Writing RESTful Apis.",
           "Writing optimized and testable code by understanding system requirements.",

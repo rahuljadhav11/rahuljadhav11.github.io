@@ -19,7 +19,7 @@ const actions = userActions =>
 const randerWhatILike = allHobbies => (
   <div className="hobbies">
     <div className="header">I Like</div>
-    <Carousel autoplay dots={false}>
+    <Carousel autoplay>
       {group(allHobbies, 3).map((hobbies, index) => (
         <Row key={index} gutter={16}>
           {hobbies.map(hobby => (

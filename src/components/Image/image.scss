@@ -27,5 +27,11 @@
         0.20px
       );
     }
+
+    .ant-badge {
+      .ant-scroll-number.ant-badge-count.ant-badge-multiple-words {
+        pointer-events: none;
+      }
+    }
   }
 }
