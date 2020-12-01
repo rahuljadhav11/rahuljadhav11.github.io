@@ -4,7 +4,7 @@ export const user = {
     contact_number: "9404378965",
     email: "rahul.rj9421@gmail.com",
     about_me:
-      "Hi there, I am a full stack developer, currently working at Josh Software having one and a half years of experience in the media industry. I like to work on new challenging technology problems. My areas of interest are Data Structures, Algorithms, OOP Programming and Web Development. I am seeking an interesting opportunity where I can put my thoughts to solve real life problems.",
+      "Hi there, I am a full stack developer, Last worked at Josh Software having two and a half years of experience in the media industry. I like to work on new challenging technology problems. My areas of interest are Data Structures, Algorithms, OOP Programming and Web Development. I am seeking an interesting opportunity where I can put my thoughts to solve real life problems.",
     actions: [
       {
         name: "linkedin",
@@ -24,22 +24,22 @@ export const user = {
   details: {
     skills: {
       backend: [
-        { name: "rails", experience: "1.5+" },
-        { name: "ruby", experience: "1.5+" },
-        { name: "c" },
-        { name: "java" }
+        { name: "rails", experience: "2.5+" },
+        { name: "ruby", experience: "2.5+" },
+        { name: "python" },
+        { name: "c" }
       ],
       frontend: [
-        { name: "react", experience: "1+" },
-        { name: "redux", experience: "1+" },
-        { name: "rails", experience: "1.5+" },
-        { name: "javascript", experience: "1.5+" },
+        { name: "react", experience: "2+" },
+        { name: "redux", experience: "2+" },
+        { name: "rails", experience: "2.5+" },
+        { name: "javascript", experience: "2.5+" },
         { name: "jquery", experience: "0.5" },
-        { name: "antd", experience: "0.5+" },
+        { name: "antd", experience: "1.5+" },
         { name: "haml", experience: "0.5" }
       ],
       database: [
-        { name: "psql", experience: "1.5+" },
+        { name: "psql", experience: "2.5+" },
         { name: "mongodb", experience: "0.5+" },
         { name: "mysql" }
       ],
@@ -56,7 +56,7 @@ export const user = {
         logo: "josh",
         companyLink: "https://joshsoftware.com",
         designation: "Software Engineer",
-        period: "JUN 2018 - PRESENT",
+        period: "JUN 2018 - OCT 2020",
         description:
           "Worked on projects in media domain based on Ruby on Rails and ReactJs platform. Build a digital platform to automate ad-sales business which provides entire visibility of advertising inventory and revenue.",
         responsibilities: [
@@ -88,7 +88,7 @@ export const user = {
     ],
     projects: [
       {
-        title: "MINT - Sports - Current Project",
+        title: "MINT - Sports - Last Project",
         sub_title: "JUL 2019 - PRESENT",
         description:
           "The project is focused on sales and prs team of star sports to handle their ad-sales business for sport channels. It helps them to move from manual to automated processing. It also helps stakeholders to get the entire visibility of their available and booked inventory in various views. It sets specific workflow for the sales-advertisement department.",
