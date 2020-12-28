@@ -26,22 +26,18 @@ export const user = {
       backend: [
         { name: "rails", experience: "2.5+" },
         { name: "ruby", experience: "2.5+" },
-        { name: "python" },
-        { name: "c" }
+        { name: "python" }
       ],
       frontend: [
         { name: "react", experience: "2+" },
         { name: "redux", experience: "2+" },
         { name: "rails", experience: "2.5+" },
         { name: "javascript", experience: "2.5+" },
-        { name: "jquery", experience: "0.5" },
-        { name: "antd", experience: "1.5+" },
-        { name: "haml", experience: "0.5" }
+        { name: "antd", experience: "1.5+" }
       ],
       database: [
         { name: "psql", experience: "2.5+" },
-        { name: "mongodb", experience: "0.5+" },
-        { name: "mysql" }
+        { name: "mongodb", experience: "0.5+" }
       ],
       tools: [
         { name: "git" },
