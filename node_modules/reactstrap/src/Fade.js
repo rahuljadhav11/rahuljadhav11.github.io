@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Transition } from 'react-transition-group';
-import { mapToCssModules, omit, pick, TransitionPropTypeKeys, TransitionTimeouts, tagPropType } from './utils';
+import {
+  addDefaultProps,
+  mapToCssModules,
+  omit,
+  pick,
+  tagPropType,
+  TransitionPropTypeKeys,
+  TransitionTimeouts,
+} from './utils';
 
 const propTypes = {
   ...Transition.propTypes,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   tag: tagPropType,
   baseClass: PropTypes.string,
@@ -24,9 +32,6 @@ const propTypes = {
 
 const defaultProps = {
   ...Transition.defaultProps,
-  tag: 'div',
-  baseClass: 'fade',
-  baseClassActive: 'show',
   timeout: TransitionTimeouts.Fade,
   appear: true,
   enter: true,
@@ -35,29 +40,34 @@ const defaultProps = {
 };
 
 function Fade(props) {
+  const ref = useRef(null);
+
   const {
-    tag: Tag,
-    baseClass,
-    baseClassActive,
+    tag: Tag = 'div',
+    baseClass = 'fade',
+    baseClassActive = 'show',
     className,
     cssModule,
     children,
-    innerRef,
+    innerRef = ref,
     ...otherProps
-  } = props;
+  } = addDefaultProps(defaultProps, props);
 
-  const transitionProps = pick(otherProps, TransitionPropTypeKeys);
+  const transitionProps = pick(
+    { defaultProps, ...otherProps },
+    TransitionPropTypeKeys,
+  );
+
   const childProps = omit(otherProps, TransitionPropTypeKeys);
 
   return (
-    <Transition {...transitionProps}>
+    <Transition nodeRef={innerRef} {...transitionProps}>
       {(status) => {
         const isActive = status === 'entered';
-        const classes = mapToCssModules(classNames(
-          className,
-          baseClass,
-          isActive && baseClassActive
-        ), cssModule);
+        const classes = mapToCssModules(
+          classNames(className, baseClass, isActive && baseClassActive),
+          cssModule,
+        );
         return (
           <Tag className={classes} {...childProps} ref={innerRef}>
             {children}
@@ -69,6 +79,5 @@ function Fade(props) {
 }
 
 Fade.propTypes = propTypes;
-Fade.defaultProps = defaultProps;
 
 export default Fade;

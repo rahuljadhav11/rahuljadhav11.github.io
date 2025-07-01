@@ -2,27 +2,32 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pain11.github.io",
+  "homepage": "https://rahuljadhav11.github.io",
   "engines": {
-    "npm": "6.4.1",
-    "node": "8.16.2"
+    "npm": ">=8.0.0",
+    "node": ">=18.0.0"
   },
   "dependencies": {
-    "antd": "^3.26.4",
-    "axios": "^0.18.1",
-    "babel-plugin-import": "^1.13.0",
-    "bootstrap": "^4.3.1",
-    "csv-string": "^3.1.5",
-    "csvtojson": "^2.0.8",
+    "tailwindcss": "^3.4.17",
+    "antd": "^5.21.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "csv-string": "^4.1.1",
+    "csvtojson": "^2.0.10",
     "font-awesome": "^4.7.0",
-    "fs": "0.0.1-security",
-    "gh-pages": "^2.2.0",
-    "node-sass": "^4.13.1",
-    "papaparse": "^5.2.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
-    "reactstrap": "^7.1.0"
+    "lucide-react": "^0.263.1",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "reactstrap": "^9.2.3",
+    "recharts": "^2.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.2.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.82.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -33,12 +38,27 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "overrides": {
+    "@ant-design/icons-react": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  }
 }

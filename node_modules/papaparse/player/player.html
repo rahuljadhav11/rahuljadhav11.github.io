@@ -4,7 +4,7 @@
 		<title>Papa Parse Player</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="player.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="../papaparse.js"></script>
 		<script src="player.js"></script>
 	</head>
@@ -24,6 +24,7 @@
 				<label><input type="checkbox" id="skipEmptyLines"> Skip empty lines</label>
 				<label><input type="checkbox" id="step-pause"> Pause on step</label>
 				<label><input type="checkbox" id="print-steps"> Log each step/chunk</label>
+				<label>Skip First N Lines: <input type="number" id="skipFirstNLines"></label>
 				
 				<label>Delimiter: <input type="text" size="5" placeholder="auto" id="delimiter"> <a href="javascript:" id="insert-tab">tab</a></label>
 
